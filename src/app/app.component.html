@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M.I.A Tracker - Maintenance Inventory Asset Tracker</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
 <!-- NAVBAR (sin JS: toggle con checkbox) -->
 <header class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -42,8 +57,10 @@
   <section class="bg-gradient-to-br from-emerald-700 via-emerald-600 to-lime-500 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">M.I.A Tracker<span class="underline decoration-lime-200/70">(Maintenance Inventory Asset Tracker)</span></h1>
-        <p class="mt-4 text-lg text-emerald-50">was built by maintenance professionals who’ve experienced these challenges firsthand. Our system eliminates the guesswork and ensures your team always knows what’s available — before heading out to a job.</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">M.I.A Tracker</h1>
+        <h3 class="text-2xl md:text-3xl font-extrabold leading-tight">Maintenance Inventory Asset Tracker</h3>
+
+        <p class="mt-4 text-lg text-emerald-50">Built by maintenance professionals who've experienced these challenges firsthand. Our system eliminates the guesswork and ensures your team always knows what's available — before heading out to a job.</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#mobile" class="px-5 py-3 rounded-xl bg-white text-emerald-800 font-semibold shadow hover:bg-emerald-50">
             <i class="fa-solid fa-mobile-screen-button mr-2"></i> Explore Mobile App
@@ -62,7 +79,7 @@
           <img src="https://images.unsplash.com/photo-1557825835-c934fd6bb6df?q=80&w=1200&auto=format&fit=crop" alt="MIA Mobile App" class="w-full h-auto">
         </div>
         <div class="absolute -bottom-6 -left-6 bg-white text-emerald-800 shadow-lg rounded-2xl px-5 py-4 border border-emerald-100">
-          <p class="font-semibold">While there’s no single universal statistic, industry reports and case studies from property management software providers (like AppFolio, Buildium, and Yardi) suggest:</p>
+          <p class="font-semibold">While there's no single universal statistic, industry reports and case studies from property management software providers (like AppFolio, Buildium, and Yardi) suggest:</p>
           <p class="text-sm text-slate-600">-- 15% to 30% of maintenance visits may be delayed or require rescheduling due to missing supplies or parts.</p>
 
           <p class="text-sm text-slate-600">-- In properties with poor inventory systems, it can be even higher.</p>
@@ -78,7 +95,7 @@
 
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         <div class="p-6 rounded-2xl bg-white shadow-lg border border-emerald-100">
-          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-3">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-3 text-2xl">
             <i class="fa-solid fa-qrcode"></i>
           </div>
           <h3 class="font-bold text-lg text-emerald-900">Fast Barcode/QR</h3>
@@ -86,7 +103,7 @@
         </div>
 
         <div class="p-6 rounded-2xl bg-white shadow-lg border border-emerald-100">
-          <div class="w-12 h-12 rounded-xl bg-lime-100 text-lime-700 flex items-center justify-center mb-3">
+          <div class="w-12 h-12 rounded-xl bg-lime-100 text-lime-700 flex items-center justify-center mb-3 text-2xl">
             <i class="fa-solid fa-diagram-project"></i>
           </div>
           <h3 class="font-bold text-lg text-emerald-900">Full Traceability</h3>
@@ -94,7 +111,7 @@
         </div>
 
         <div class="p-6 rounded-2xl bg-white shadow-lg border border-emerald-100">
-          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-3">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-3 text-2xl">
             <i class="fa-solid fa-rotate"></i>
           </div>
           <h3 class="font-bold text-lg text-emerald-900">Auto-Replenishment</h3>
@@ -201,24 +218,28 @@
 
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         <div class="p-6 bg-white border border-emerald-100 rounded-2xl shadow-lg">
-          <h3 class="text-xl font-bold text-emerald-900">Starter</h3>
+          <h3 class="text-xl font-bold text-emerald-900">Property 3 Techs</h3>
           <div class="text-3xl font-extrabold text-emerald-700 mt-2">$179.99<span class="text-base text-slate-500">/mo</span></div>
           <ul class="mt-4 space-y-2 text-slate-700">
             <li>• 3 Maintenance user</li>
             <li>• Mobile app</li>
             <li>• Email support</li>
+            <li>• Up to 1000 Items on Inventory</li>
           </ul>
-          <button class="mt-6 w-full px-4 py-2 rounded-xl bg-emerald-700 text-white">Start trial</button>
+          <button class="mt-6 w-full px-4 py-2 rounded-xl bg-emerald-700 text-white">Get started</button>
         </div>
 
         <div class="relative p-6 bg-white border-2 border-lime-400 rounded-2xl shadow-lg scale-[1.02]">
           <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-700 text-white px-3 py-1 rounded-full text-xs font-bold shadow">MOST POPULAR</div>
-          <h3 class="text-xl font-bold text-emerald-900">Professional</h3>
+          <h3 class="text-xl font-bold text-emerald-900">Property 3 Techs</h3>
           <div class="text-3xl font-extrabold text-emerald-700 mt-2">$229.99<span class="text-base text-slate-500">/mo</span></div>
           <ul class="mt-4 space-y-2 text-slate-700">
             <li>• 4 to 6 Maintenance User</li>
             <li>• Advanced analytics</li>
             <li>• Priority support</li>
+            <li>• Email support</li>
+            <li>• Up to 2000 Items on Inventory</li>
+
           </ul>
           <button class="mt-6 w-full px-4 py-2 rounded-xl bg-lime-600 text-white font-bold">Get started</button>
         </div>
@@ -244,10 +265,10 @@
       <h2 class="text-3xl font-extrabold">Ready to transform your inventory?</h2>
       <p class="text-emerald-100 mt-3">Join teams already saving time and reducing spend with M.I.A Tracker.</p>
       <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#contact" class="px-6 py-3 rounded-xl bg-white text-emerald-800 font-semibold shadow">Free 30-day trial</a>
+        <a href="#contact" class="px-6 py-3 rounded-xl bg-white text-emerald-800 font-semibold shadow">Get started</a>
         <a href="#contact" class="px-6 py-3 rounded-xl border border-white/70 hover:bg-white/10">Schedule a demo</a>
       </div>
-      <p class="text-sm text-emerald-100 mt-3">No credit card • Setup in minutes • Support included</p>
+      <p class="text-sm text-emerald-100 mt-3">Setup in minutes • Support included</p>
     </div>
   </section>
 
@@ -277,3 +298,6 @@
     </div>
   </footer>
 </main>
+
+</body>
+</html>
