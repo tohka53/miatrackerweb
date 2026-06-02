@@ -1,6 +1,6 @@
 {
-    "name": "miatracker",
-    "short_name": "miatracker",
+    "name": "crmtrch",
+    "short_name": "crmtrch",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
