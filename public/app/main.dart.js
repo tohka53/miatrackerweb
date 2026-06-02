@@ -36192,10 +36192,10 @@ case 6:case 1:return A.n(q,r)
 case 2:return A.m(o.at(-1),r)}})
 return A.o($async$atb,r)},
 JV(a){var s,r
-if(a==null)return"Q 0.00"
+if(a==null)return"$ 0.00"
 if(typeof a=="number")s=a
 else{r=A.kH(J.b0(a))
-s=r==null?0:r}return"Q "+B.m.al(s,2)},
+s=r==null?0:r}return"$ "+B.m.al(s,2)},
 a_w(){var s=0,r=A.p(t.R),q,p=2,o=[],n,m,l,k,j
 var $async$a_w=A.l(function(a,b){if(a===1){o.push(b)
 s=p}for(;;)switch(s){case 0:p=4
@@ -37736,7 +37736,7 @@ break
 case 6:case 1:return A.n(q,r)
 case 2:return A.m(o.at(-1),r)}})
 return A.o($async$a4F,r)},
-aIy(a){return"Q "+B.m.al(a,2)},
+aIy(a){return"$ "+B.m.al(a,2)},
 E_(a,b){return A.bDZ(a,b)},
 bDZ(a5,a6){var s=0,r=A.p(t.bo),q,p=2,o=[],n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4
 var $async$E_=A.l(function(a7,a8){if(a7===1){o.push(a8)
@@ -134356,7 +134356,7 @@ s=A.V(l,r,B.y,l,l,new A.a2(B.cS,l,l,s,l,l,B.H),l,50,l,l,l,l,50)
 r=a.h(0,"nombre_producto")
 r=A.r(r==null?"Sin nombre":r,l,l,l,l,B.cj,l,l,l)
 q=a.h(0,"precio_base")
-q=A.r("Q "+A.h(q==null?0:q),l,l,l,l,l,l,l,l)
+q=A.r("$ "+A.h(q==null?0:q),l,l,l,l,l,l,l,l)
 p=a.h(0,"stock_disponible")
 p=A.h(p==null?0:p)
 o=t.p
@@ -134507,7 +134507,7 @@ q=t.p
 n=A.a4(A.b([A.ad(A.R(A.b([A.r("Pedido #"+A.h(m.h(0,"order_number")),o,o,o,o,B.cv,o,o,o),A.r(r,o,o,o,o,B.cK,o,o,o)],q),B.S,B.r,B.q),1),n.Pu(n.azA(l),n.aNV(l),B.a5B)],q),B.t,B.r,B.q,0)
 p=A.r(A.h(m.h(0,"total_productos"))+" productos",o,o,o,o,o,o,o,o)
 m=m.h(0,"total")
-return A.cs(new A.at(B.a3,A.R(A.b([n,B.dk,A.a4(A.b([p,A.r("Q "+A.h(m==null?0:m),o,o,o,o,B.fu,o,o,o)],q),B.t,B.bV,B.q,0)],q),B.S,B.r,B.q),o),o,o,B.d7,o)},
+return A.cs(new A.at(B.a3,A.R(A.b([n,B.dk,A.a4(A.b([p,A.r("$ "+A.h(m==null?0:m),o,o,o,o,B.fu,o,o,o)],q),B.t,B.bV,B.q,0)],q),B.S,B.r,B.q),o),o,o,B.d7,o)},
 $S:17}
 A.b63.prototype={
 $3(a,b,c){return B.o1},
@@ -134739,7 +134739,7 @@ r=A.N(10)
 n=A.N(10)
 m=A.eX(B.Y2,new A.a1N(d,B.cx,80,A.V(g,B.a2a,B.y,B.bE,g,g,g,80,g,g,g,g,g),g),B.bl)
 l=A.r(o,1,B.aJ,g,g,B.bf7,g,g,g)
-k=A.r("Q "+J.l1(q,2),g,g,g,g,B.bhK,g,g,g)
+k=A.r("$ "+J.l1(q,2),g,g,g,g,B.bhK,g,g,g)
 j=J.nc(p)
 i=j.jT(p,0)?"Stock: "+A.h(p):"Sin stock"
 h=t.p
