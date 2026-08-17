@@ -32,6 +32,11 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
+                "glob": ".well-known/**",
+                "input": "public",
+                "output": "/.well-known"
+              },
+              {
                 "glob": "**/*",
                 "input": "public"
               },
@@ -94,6 +99,11 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+              {
+                "glob": ".well-known/**",
+                "input": "public",
+                "output": "/.well-known"
+              },
               {
                 "glob": "**/*",
                 "input": "public"
