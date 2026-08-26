@@ -4,53 +4,57 @@ import { Meta, Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-privacidad',
   templateUrl: './privacidad.component.html',
-  // Necesario en Angular 19+: los componentes son standalone por defecto.
-  // En Angular 17/18 es inofensivo dejarlo.
+  // Required on Angular 19+: components are standalone by default.
   standalone: false,
 })
 export class PrivacidadComponent implements OnInit {
-  /** Cambiá esta fecha cada vez que edites el texto de la política. */
-  readonly ultimaActualizacion = '26 de agosto de 2026';
-  readonly vigenciaDesde = '26 de agosto de 2026';
+  /** Update this date every time the policy text changes. */
+  readonly lastUpdated = 'August 26, 2026';
+  readonly effectiveDate = 'August 26, 2026';
 
-  readonly marca = 'M.I.A Tracker';
-  readonly sitio = 'https://www.miatracker.com';
-  readonly correoPrivacidad = 'mcabreraSoS@miatracker.com';
+  readonly brand = 'M.I.A Tracker';
+  readonly site = 'https://www.miatracker.com';
+  readonly privacyEmail = 'mcabreraSoS@miatracker.com';
+  readonly addressLines = [
+    'M.I.A Tracker',
+    '51 Pleasant St # 1117',
+    'Malden, MA 02148',
+    'United States',
+  ];
 
-  /** Índice lateral. Los ids deben coincidir con los del HTML. */
-  readonly secciones = [
-    { id: 'responsable', titulo: '1. Quiénes somos' },
-    { id: 'alcance', titulo: '2. Alcance de esta política' },
-    { id: 'datos', titulo: '3. Qué datos recopilamos' },
-    { id: 'finalidades', titulo: '4. Para qué usamos los datos' },
-    { id: 'cookies', titulo: '5. Cookies y tecnologías similares' },
-    { id: 'terceros', titulo: '6. Con quién compartimos los datos' },
-    { id: 'transferencias', titulo: '7. Transferencias internacionales' },
-    { id: 'conservacion', titulo: '8. Cuánto tiempo conservamos los datos' },
-    { id: 'seguridad', titulo: '9. Seguridad de la información' },
-    { id: 'derechos', titulo: '10. Tus derechos y cómo ejercerlos' },
-    { id: 'menores', titulo: '11. Menores de edad' },
-    { id: 'enlaces', titulo: '12. Enlaces a sitios de terceros' },
-    { id: 'marco-legal', titulo: '13. Marco legal aplicable' },
-    { id: 'cambios', titulo: '14. Cambios a esta política' },
-    { id: 'contacto', titulo: '15. Contacto' },
+  /** Side navigation. Ids must match the section ids in the template. */
+  readonly sections = [
+    { id: 'who-we-are', title: '1. Who we are' },
+    { id: 'scope', title: '2. Scope of this policy' },
+    { id: 'information', title: '3. Information we collect' },
+    { id: 'how-we-use', title: '4. How we use your information' },
+    { id: 'cookies', title: '5. Cookies and similar technologies' },
+    { id: 'sharing', title: '6. Who we share information with' },
+    { id: 'transfers', title: '7. International visitors' },
+    { id: 'retention', title: '8. How long we keep information' },
+    { id: 'security', title: '9. How we protect information' },
+    { id: 'rights', title: '10. Your privacy rights' },
+    { id: 'children', title: '11. Children’s privacy' },
+    { id: 'links', title: '12. Third-party links' },
+    { id: 'legal', title: '13. Governing law' },
+    { id: 'changes', title: '14. Changes to this policy' },
+    { id: 'contact', title: '15. Contact us' },
   ];
 
   constructor(private title: Title, private meta: Meta) {}
 
   ngOnInit(): void {
-    this.title.setTitle('Política de Privacidad | M.I.A Tracker');
+    this.title.setTitle('Privacy Policy | M.I.A Tracker');
     this.meta.updateTag({
       name: 'description',
       content:
-        'Política de privacidad de M.I.A Tracker: qué datos recopilamos en miatracker.com, para qué los usamos, con quién los compartimos y cómo podés ejercer tus derechos.',
+        'M.I.A Tracker privacy policy: what we collect on miatracker.com, how we use it, who we share it with, and how you can exercise your privacy rights.',
     });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.updateTag({ property: 'og:title', content: 'Política de Privacidad | M.I.A Tracker' });
-    this.meta.updateTag({ property: 'og:url', content: `${this.sitio}/privacidad` });
+    this.meta.updateTag({ property: 'og:title', content: 'Privacy Policy | M.I.A Tracker' });
+    this.meta.updateTag({ property: 'og:url', content: `${this.site}/privacidad` });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
 
-    // La ruta se abre desde el footer: asegurate de empezar arriba de la página.
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0 });
     }

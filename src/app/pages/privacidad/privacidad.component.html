@@ -1,12 +1,12 @@
 <!--
-  Política de Privacidad — M.I.A Tracker
-  Acento: emerald + lime, igual que el navbar y el footer del landing.
-  El pt-16 del <article> compensa el header fijo (h-16).
+  Privacy Policy — M.I.A Tracker
+  Accent: emerald + lime, same as the landing navbar and footer.
+  The pt-16 on <article> clears the fixed header (h-16).
 -->
 
 <article class="bg-white text-slate-700 pt-16">
 
-  <!-- ============ Encabezado ============ -->
+  <!-- ============ Header ============ -->
   <header class="bg-emerald-900">
     <div class="mx-auto max-w-5xl px-6 py-16 sm:py-20">
       <a routerLink="/"
@@ -14,470 +14,505 @@
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
-        Volver al inicio
+        Back to home
       </a>
 
       <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-        Política de Privacidad
+        Privacy Policy
       </h1>
       <p class="mt-4 max-w-2xl text-lg leading-relaxed text-emerald-100">
-        Cómo {{ marca }} recopila, usa y protege la información de las personas que visitan
+        How {{ brand }} collects, uses and protects information about the people who visit
         <span class="text-white">miatracker.com</span>.
       </p>
 
       <dl class="mt-8 flex flex-wrap gap-x-10 gap-y-3 text-sm">
         <div>
-          <dt class="text-emerald-300">Última actualización</dt>
-          <dd class="mt-0.5 font-medium text-white">{{ ultimaActualizacion }}</dd>
+          <dt class="text-emerald-300">Last updated</dt>
+          <dd class="mt-0.5 font-medium text-white">{{ lastUpdated }}</dd>
         </div>
         <div>
-          <dt class="text-emerald-300">Vigente desde</dt>
-          <dd class="mt-0.5 font-medium text-white">{{ vigenciaDesde }}</dd>
+          <dt class="text-emerald-300">Effective date</dt>
+          <dd class="mt-0.5 font-medium text-white">{{ effectiveDate }}</dd>
         </div>
         <div>
-          <dt class="text-emerald-300">Contacto</dt>
+          <dt class="text-emerald-300">Contact</dt>
           <dd class="mt-0.5 font-medium text-white">
-            <a [href]="'mailto:' + correoPrivacidad" class="hover:text-lime-200">{{ correoPrivacidad }}</a>
+            <a [href]="'mailto:' + privacyEmail" class="hover:text-lime-200">{{ privacyEmail }}</a>
           </dd>
         </div>
       </dl>
     </div>
   </header>
 
-  <!-- ============ Cuerpo ============ -->
+  <!-- ============ Body ============ -->
   <div class="mx-auto max-w-5xl px-6 py-12 lg:flex lg:gap-12 lg:py-16">
 
-    <!-- Índice -->
-    <nav class="mb-12 lg:mb-0 lg:w-64 lg:shrink-0" aria-label="Índice de la política">
+    <!-- Table of contents -->
+    <nav class="mb-12 lg:mb-0 lg:w-64 lg:shrink-0" aria-label="Policy contents">
       <div class="lg:sticky lg:top-24">
-        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Contenido</p>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Contents</p>
         <ul class="mt-4 space-y-1 border-l border-slate-200">
-          <li *ngFor="let s of secciones">
+          <li *ngFor="let s of sections">
             <a [href]="'#' + s.id"
                class="block border-l-2 border-transparent -ml-px py-1.5 pl-4 text-sm text-slate-600 hover:border-emerald-600 hover:text-emerald-700">
-              {{ s.titulo }}
+              {{ s.title }}
             </a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!-- Texto -->
+    <!-- Text -->
     <div class="min-w-0 flex-1 space-y-12 text-base leading-7">
 
       <p class="rounded-lg border border-slate-200 bg-slate-50 p-5 text-slate-600">
-        Esta política explica en lenguaje claro qué pasa con tu información cuando navegás nuestro
-        sitio web o nos escribís por el formulario de contacto. Si algo no te queda claro, escribinos
-        a <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>
-        y te lo explicamos.
+        This policy explains, in plain language, what happens to your information when you browse our
+        website or contact us through our forms. If anything here is unclear, email us at
+        <a [href]="'mailto:' + privacyEmail" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ privacyEmail }}</a>
+        and we will walk you through it.
       </p>
 
       <!-- 1 -->
-      <section id="responsable" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">1. Quiénes somos</h2>
+      <section id="who-we-are" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">1. Who we are</h2>
         <p class="mt-4">
-          {{ marca }} (<em>Maintenance, Inventory &amp; Asset Tracker</em>) es una solución de control de
-          inventario y activos mediante códigos de barras. Somos los responsables del tratamiento de los
-          datos personales que se recopilan a través de este sitio web.
+          {{ brand }} (<em>Maintenance, Inventory &amp; Asset Tracker</em>) is a barcode-based inventory
+          and asset control solution. We are responsible for the personal information collected through
+          this website.
         </p>
         <ul class="mt-4 space-y-1">
-          <li><span class="font-medium text-slate-900">Responsable:</span> {{ marca }}</li>
-          <li><span class="font-medium text-slate-900">Sitio web:</span> {{ sitio }}</li>
-          <li><span class="font-medium text-slate-900">País de operación:</span> Guatemala</li>
+          <li><span class="font-medium text-slate-900">Controller:</span> {{ brand }}</li>
+          <li><span class="font-medium text-slate-900">Website:</span> {{ site }}</li>
+          <li><span class="font-medium text-slate-900">Mailing address:</span> 51 Pleasant St # 1117, Malden, MA 02148, United States</li>
           <li>
-            <span class="font-medium text-slate-900">Correo de privacidad:</span>
-            <a [href]="'mailto:' + correoPrivacidad" class="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>
+            <span class="font-medium text-slate-900">Privacy contact:</span>
+            <a [href]="'mailto:' + privacyEmail" class="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ privacyEmail }}</a>
           </li>
         </ul>
       </section>
 
       <!-- 2 -->
-      <section id="alcance" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">2. Alcance de esta política</h2>
+      <section id="scope" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">2. Scope of this policy</h2>
         <p class="mt-4">
-          Esta política aplica <span class="font-medium text-slate-900">al sitio web público</span>
-          {{ sitio }} y a todas sus páginas: la página de inicio, las páginas de producto y precios, el
-          formulario de contacto y las solicitudes de demostración.
+          This policy covers the <span class="font-medium text-slate-900">public website</span>
+          {{ site }} and all of its pages: the home page, product and pricing pages, the contact form and
+          demo requests.
         </p>
         <p class="mt-4">
-          No cubre el tratamiento de datos dentro de la aplicación {{ marca }} una vez que un cliente
-          contrata el servicio: eso se rige por el contrato de servicio y su acuerdo de tratamiento de
-          datos correspondiente. Tampoco cubre sitios de terceros a los que enlacemos.
+          It does not cover how data is handled inside the {{ brand }} application once a customer
+          subscribes — that is governed by the service agreement and its data processing terms. It also
+          does not cover third-party sites we link to.
         </p>
       </section>
 
       <!-- 3 -->
-      <section id="datos" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">3. Qué datos recopilamos</h2>
+      <section id="information" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">3. Information we collect</h2>
 
-        <h3 class="mt-6 text-lg font-semibold text-slate-900">3.1 Datos que nos das voluntariamente</h3>
+        <h3 class="mt-6 text-lg font-semibold text-slate-900">3.1 Information you give us</h3>
         <p class="mt-3">
-          Cuando llenás el formulario de contacto, pedís una demostración o te suscribís a novedades,
-          recopilamos únicamente lo que escribís en esos campos:
+          When you fill in the contact form, request a demo or sign up for updates, we collect only what
+          you type into those fields:
         </p>
         <ul class="mt-3 list-disc space-y-1 pl-6 marker:text-slate-400">
-          <li>Nombre y apellido</li>
-          <li>Correo electrónico</li>
-          <li>Teléfono (opcional)</li>
-          <li>Empresa, cargo y tamaño de la operación (opcional)</li>
-          <li>El contenido del mensaje que nos enviás</li>
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Phone number (optional)</li>
+          <li>Company, job title and size of your operation (optional)</li>
+          <li>The content of the message you send us</li>
         </ul>
         <p class="mt-3 text-slate-600">
-          Te pedimos que <span class="font-medium text-slate-900">no incluyas información sensible</span>
-          (datos de salud, financieros, documentos de identidad) en el campo de mensaje. No la necesitamos
-          para atenderte.
+          Please <span class="font-medium text-slate-900">do not include sensitive information</span>
+          (health data, financial account numbers, government ID numbers) in the message field. We do not
+          need it to help you.
         </p>
 
-        <h3 class="mt-8 text-lg font-semibold text-slate-900">3.2 Datos que se recopilan automáticamente</h3>
+        <h3 class="mt-8 text-lg font-semibold text-slate-900">3.2 Information collected automatically</h3>
         <p class="mt-3">
-          Como cualquier sitio web, nuestro servidor y nuestras herramientas de medición registran datos
-          técnicos de la visita:
+          Like any website, our server and analytics tools record technical details about your visit:
         </p>
         <ul class="mt-3 list-disc space-y-1 pl-6 marker:text-slate-400">
-          <li>Dirección IP (que puede usarse para deducir el país o la ciudad aproximada)</li>
-          <li>Tipo de navegador, sistema operativo y tipo de dispositivo</li>
-          <li>Páginas visitadas, tiempo de permanencia y orden de navegación</li>
-          <li>Página o campaña desde la que llegaste (<em>referrer</em>, parámetros UTM)</li>
-          <li>Fecha y hora de la visita</li>
+          <li>IP address (which can indicate an approximate country or city)</li>
+          <li>Browser type, operating system and device type</li>
+          <li>Pages viewed, time on page and navigation path</li>
+          <li>The page or campaign you arrived from (referrer, UTM parameters)</li>
+          <li>Date and time of the visit</li>
         </ul>
+        <p class="mt-3 text-slate-600">
+          We do not collect precise geolocation, and we do not use this website to build advertising
+          profiles about identified individuals.
+        </p>
 
-        <h3 class="mt-8 text-lg font-semibold text-slate-900">3.3 Qué NO hacemos</h3>
+        <h3 class="mt-8 text-lg font-semibold text-slate-900">3.3 What we do not do</h3>
         <ul class="mt-3 list-disc space-y-1 pl-6 marker:text-slate-400">
-          <li>No vendemos ni alquilamos tus datos personales a nadie.</li>
-          <li>No compramos bases de datos de contactos para hacer prospección.</li>
-          <li>No usamos tus datos para tomar decisiones automatizadas con efectos legales sobre vos.</li>
+          <li>We do not sell or rent your personal information to anyone.</li>
+          <li>We do not buy contact lists for cold outreach.</li>
+          <li>We do not use your information for automated decisions that produce legal effects about you.</li>
         </ul>
       </section>
 
       <!-- 4 -->
-      <section id="finalidades" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">4. Para qué usamos los datos</h2>
+      <section id="how-we-use" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">4. How we use your information</h2>
         <div class="mt-4 overflow-x-auto">
           <table class="w-full min-w-[36rem] border-collapse text-left text-sm">
             <thead>
               <tr class="border-b border-slate-300">
-                <th class="py-3 pr-4 font-semibold text-slate-900">Finalidad</th>
-                <th class="py-3 pr-4 font-semibold text-slate-900">Datos usados</th>
-                <th class="py-3 font-semibold text-slate-900">Legitimación</th>
+                <th class="py-3 pr-4 font-semibold text-slate-900">Purpose</th>
+                <th class="py-3 pr-4 font-semibold text-slate-900">Information used</th>
+                <th class="py-3 font-semibold text-slate-900">Why we are allowed to</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200">
               <tr>
-                <td class="py-3 pr-4 align-top">Responder tu consulta o coordinar una demostración</td>
-                <td class="py-3 pr-4 align-top text-slate-600">Datos del formulario</td>
-                <td class="py-3 align-top text-slate-600">Tu consentimiento al enviarlo / relación precontractual</td>
+                <td class="py-3 pr-4 align-top">Answer your question or schedule a demo</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Form details</td>
+                <td class="py-3 align-top text-slate-600">You asked us to, by submitting the form</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 align-top">Enviarte una cotización o propuesta comercial</td>
-                <td class="py-3 pr-4 align-top text-slate-600">Datos del formulario</td>
-                <td class="py-3 align-top text-slate-600">Relación precontractual a petición tuya</td>
+                <td class="py-3 pr-4 align-top">Send you a quote or commercial proposal</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Form details</td>
+                <td class="py-3 align-top text-slate-600">Steps taken at your request before a contract</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 align-top">Mandarte novedades del producto o material comercial</td>
-                <td class="py-3 pr-4 align-top text-slate-600">Correo electrónico y nombre</td>
-                <td class="py-3 align-top text-slate-600">Consentimiento expreso, revocable en cualquier momento</td>
+                <td class="py-3 pr-4 align-top">Send product news or marketing email</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Name and email address</td>
+                <td class="py-3 align-top text-slate-600">Your sign-up, which you can withdraw at any time</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 align-top">Medir el uso del sitio y mejorar el contenido</td>
-                <td class="py-3 pr-4 align-top text-slate-600">Datos técnicos y de navegación, agregados</td>
-                <td class="py-3 align-top text-slate-600">Interés legítimo en mantener y mejorar el sitio</td>
+                <td class="py-3 pr-4 align-top">Measure site usage and improve content</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Aggregated technical and navigation data</td>
+                <td class="py-3 align-top text-slate-600">Our legitimate interest in running the site</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 align-top">Prevenir abuso, spam y ataques al sitio</td>
-                <td class="py-3 pr-4 align-top text-slate-600">IP y registros del servidor</td>
-                <td class="py-3 align-top text-slate-600">Interés legítimo en la seguridad del servicio</td>
+                <td class="py-3 pr-4 align-top">Prevent spam, abuse and attacks on the site</td>
+                <td class="py-3 pr-4 align-top text-slate-600">IP address and server logs</td>
+                <td class="py-3 align-top text-slate-600">Our legitimate interest in security</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 align-top">Cumplir obligaciones legales o requerimientos de autoridad</td>
-                <td class="py-3 pr-4 align-top text-slate-600">Los que la ley exija</td>
-                <td class="py-3 align-top text-slate-600">Obligación legal</td>
+                <td class="py-3 pr-4 align-top">Meet legal obligations or lawful requests</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Whatever the law requires</td>
+                <td class="py-3 align-top text-slate-600">Legal obligation</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p class="mt-4">
-          Si en algún momento quisiéramos usar tus datos para una finalidad distinta de las anteriores,
-          te lo informaremos y, cuando corresponda, te pediremos tu consentimiento antes de hacerlo.
+          If we ever want to use your information for a purpose that is not listed above, we will tell you
+          first and, where required, ask for your permission.
         </p>
       </section>
 
       <!-- 5 -->
       <section id="cookies" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">5. Cookies y tecnologías similares</h2>
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">5. Cookies and similar technologies</h2>
         <p class="mt-4">
-          Una cookie es un archivo pequeño que el sitio guarda en tu navegador para recordar algo entre
-          una página y otra. Usamos tres tipos:
+          A cookie is a small file the site stores in your browser so it can remember something between
+          one page and the next. We use three kinds:
         </p>
 
         <div class="mt-6 space-y-4">
           <div class="rounded-lg border border-slate-200 p-5">
-            <p class="font-semibold text-slate-900">Cookies necesarias</p>
+            <p class="font-semibold text-slate-900">Strictly necessary cookies</p>
             <p class="mt-1 text-slate-600">
-              Permiten que el sitio funcione: mantener tu preferencia de idioma, recordar que ya cerraste
-              el aviso de cookies, proteger los formularios contra envíos automatizados. No se pueden
-              desactivar sin romper el sitio y no requieren tu consentimiento.
+              These make the site work: remembering your language preference, remembering that you already
+              dismissed the cookie notice, and protecting forms against automated submissions. They cannot
+              be turned off without breaking the site and do not require your consent.
             </p>
           </div>
           <div class="rounded-lg border border-slate-200 p-5">
-            <p class="font-semibold text-slate-900">Cookies de analítica</p>
+            <p class="font-semibold text-slate-900">Analytics cookies</p>
             <p class="mt-1 text-slate-600">
-              Nos dicen cuántas personas visitan cada página y por dónde navegan, de forma agregada. Las
-              usamos para saber qué contenido sirve y cuál no. Podés rechazarlas sin perder ninguna
-              funcionalidad.
+              These tell us how many people visit each page and how they move through the site, in
+              aggregate. We use them to learn which content works. You can refuse them without losing any
+              functionality.
             </p>
           </div>
           <div class="rounded-lg border border-slate-200 p-5">
-            <p class="font-semibold text-slate-900">Cookies de marketing</p>
+            <p class="font-semibold text-slate-900">Marketing cookies</p>
             <p class="mt-1 text-slate-600">
-              Permiten medir el resultado de nuestras campañas y mostrar anuncios relevantes en otras
-              plataformas. Solo se activan si las aceptás.
+              These let us measure how our campaigns perform and show relevant ads on other platforms.
+              They are only set if you accept them.
             </p>
           </div>
         </div>
 
-        <h3 class="mt-8 text-lg font-semibold text-slate-900">Cómo controlarlas</h3>
+        <h3 class="mt-8 text-lg font-semibold text-slate-900">How to control them</h3>
         <p class="mt-3">
-          Podés cambiar tu decisión cuando querás desde el aviso de cookies del sitio, o borrarlas y
-          bloquearlas desde la configuración de tu navegador (Chrome, Safari, Firefox y Edge lo permiten
-          en la sección de privacidad). Si las bloqueás todas, algunas partes del sitio pueden dejar de
-          comportarse como esperás.
+          You can change your choice at any time from the cookie notice on the site, or block and delete
+          cookies from your browser settings (Chrome, Safari, Firefox and Edge all allow this under
+          privacy settings). If you block everything, some parts of the site may not behave as expected.
+        </p>
+        <p class="mt-3">
+          We also honor <span class="font-medium text-slate-900">Global Privacy Control</span> (GPC)
+          signals sent by your browser as an opt-out of analytics and marketing cookies.
         </p>
       </section>
 
       <!-- 6 -->
-      <section id="terceros" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">6. Con quién compartimos los datos</h2>
+      <section id="sharing" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">6. Who we share information with</h2>
         <p class="mt-4">
-          No vendemos tu información. La compartimos únicamente con proveedores que nos prestan servicios
-          y que solo pueden usarla siguiendo nuestras instrucciones:
+          We do not sell your information. We share it only with service providers who work on our behalf
+          and may use it only as we instruct them:
         </p>
         <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-slate-400">
-          <li><span class="font-medium text-slate-900">Proveedores de hosting e infraestructura</span>, que alojan el sitio y sus registros.</li>
-          <li><span class="font-medium text-slate-900">Proveedores de correo electrónico</span>, para recibir y responder tus mensajes.</li>
-          <li><span class="font-medium text-slate-900">Herramientas de analítica web</span>, para medir el uso del sitio.</li>
-          <li><span class="font-medium text-slate-900">CRM y herramientas de gestión comercial</span>, para dar seguimiento a tu solicitud.</li>
-          <li><span class="font-medium text-slate-900">Plataformas de publicidad</span>, únicamente si aceptaste las cookies de marketing.</li>
+          <li><span class="font-medium text-slate-900">Hosting and infrastructure providers</span>, which run the site and its logs.</li>
+          <li><span class="font-medium text-slate-900">Email providers</span>, so we can receive and answer your messages.</li>
+          <li><span class="font-medium text-slate-900">Web analytics tools</span>, to measure site usage.</li>
+          <li><span class="font-medium text-slate-900">CRM and sales tools</span>, to follow up on your request.</li>
+          <li><span class="font-medium text-slate-900">Advertising platforms</span>, only if you accepted marketing cookies.</li>
         </ul>
         <p class="mt-4">
-          También podemos divulgar información cuando una autoridad competente lo requiera conforme a la
-          ley, o cuando sea necesario para defender nuestros derechos legales.
+          We may also disclose information when a competent authority lawfully requires it, or when it is
+          necessary to establish or defend our legal rights. If our business is ever sold or merged, your
+          information may transfer to the acquirer under this same policy.
         </p>
         <p class="mt-4 text-slate-600">
-          Si querés el detalle de los proveedores concretos que utilizamos en este momento, pedilo a
-          <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>
-          y te lo damos.
+          Want the current list of the specific providers we use? Ask at
+          <a [href]="'mailto:' + privacyEmail" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ privacyEmail }}</a>
+          and we will send it.
         </p>
       </section>
 
       <!-- 7 -->
-      <section id="transferencias" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">7. Transferencias internacionales</h2>
+      <section id="transfers" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">7. International visitors</h2>
         <p class="mt-4">
-          Varios de los servicios que usamos (hosting, correo, analítica) operan servidores fuera de
-          Guatemala, principalmente en Estados Unidos y la Unión Europea. Eso significa que tu información
-          puede almacenarse o procesarse en esos países.
+          Our site and the services behind it are operated from the United States. If you visit from
+          outside the U.S., your information is transferred to and processed in the United States, whose
+          privacy laws may differ from those of your country.
         </p>
         <p class="mt-4">
-          Cuando eso ocurre, escogemos proveedores que ofrecen garantías contractuales de seguridad y
-          confidencialidad equivalentes a las que aplicamos nosotros.
+          Some of our providers also run servers in other regions. Where that happens, we choose providers
+          that offer contractual security and confidentiality commitments equivalent to our own.
         </p>
       </section>
 
       <!-- 8 -->
-      <section id="conservacion" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">8. Cuánto tiempo conservamos los datos</h2>
+      <section id="retention" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">8. How long we keep information</h2>
         <div class="mt-4 overflow-x-auto">
           <table class="w-full min-w-[30rem] border-collapse text-left text-sm">
             <thead>
               <tr class="border-b border-slate-300">
-                <th class="py-3 pr-4 font-semibold text-slate-900">Tipo de dato</th>
-                <th class="py-3 font-semibold text-slate-900">Plazo de conservación</th>
+                <th class="py-3 pr-4 font-semibold text-slate-900">Type of information</th>
+                <th class="py-3 font-semibold text-slate-900">Retention period</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200">
               <tr>
-                <td class="py-3 pr-4 align-top">Consultas del formulario que no derivan en negocio</td>
-                <td class="py-3 align-top text-slate-600">24 meses desde el último contacto</td>
+                <td class="py-3 pr-4 align-top">Form inquiries that do not become business</td>
+                <td class="py-3 align-top text-slate-600">24 months from last contact</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 align-top">Contactos suscritos a comunicaciones comerciales</td>
-                <td class="py-3 align-top text-slate-600">Hasta que retirés tu consentimiento</td>
+                <td class="py-3 pr-4 align-top">Contacts subscribed to marketing email</td>
+                <td class="py-3 align-top text-slate-600">Until you unsubscribe</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 align-top">Registros técnicos del servidor</td>
-                <td class="py-3 align-top text-slate-600">Hasta 12 meses</td>
+                <td class="py-3 pr-4 align-top">Server and security logs</td>
+                <td class="py-3 align-top text-slate-600">Up to 12 months</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 align-top">Datos de analítica agregados</td>
-                <td class="py-3 align-top text-slate-600">Hasta 26 meses</td>
+                <td class="py-3 pr-4 align-top">Aggregated analytics data</td>
+                <td class="py-3 align-top text-slate-600">Up to 26 months</td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 align-top">Documentación con obligación legal o contable</td>
-                <td class="py-3 align-top text-slate-600">El plazo que exija la ley aplicable</td>
+                <td class="py-3 pr-4 align-top">Records with a legal or accounting obligation</td>
+                <td class="py-3 align-top text-slate-600">As long as the applicable law requires</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p class="mt-4">
-          Cumplido el plazo, la información se elimina o se anonimiza de forma que ya no permita
-          identificarte.
+          Once the period ends, the information is destroyed or anonymized so it can no longer identify
+          you, consistent with Massachusetts law on the destruction of records containing personal
+          information (M.G.L. c. 93I).
         </p>
       </section>
 
       <!-- 9 -->
-      <section id="seguridad" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">9. Seguridad de la información</h2>
+      <section id="security" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">9. How we protect information</h2>
         <p class="mt-4">
-          Aplicamos medidas técnicas y organizativas razonables para proteger tu información:
+          We maintain a written information security program with administrative, technical and physical
+          safeguards, as required of anyone holding personal information about Massachusetts residents
+          (201 CMR 17.00). In practice that means:
         </p>
         <ul class="mt-4 list-disc space-y-1 pl-6 marker:text-slate-400">
-          <li>Cifrado en tránsito mediante HTTPS/TLS en todo el sitio.</li>
-          <li>Acceso a los datos restringido al personal que lo necesita para su trabajo.</li>
-          <li>Autenticación reforzada en las herramientas donde se guardan los contactos.</li>
-          <li>Respaldos periódicos y actualización de los componentes del sitio.</li>
+          <li>HTTPS/TLS encryption in transit across the whole site.</li>
+          <li>Access limited to the people who need it to do their job.</li>
+          <li>Multi-factor authentication on the tools where contact records live.</li>
+          <li>Regular backups and patching of the site's components.</li>
         </ul>
         <p class="mt-4">
-          Ningún sistema conectado a internet es invulnerable. Si llegara a ocurrir un incidente de
-          seguridad que afecte de forma significativa tus datos personales, te lo notificaremos por
-          correo electrónico a la brevedad, junto con lo que estemos haciendo para contenerlo.
+          No system connected to the internet is invulnerable. If a security incident materially affects
+          your personal information, we will notify you and the appropriate authorities as required by
+          Massachusetts breach notification law (M.G.L. c. 93H) and any other law that applies to you,
+          together with what we are doing about it.
         </p>
       </section>
 
       <!-- 10 -->
-      <section id="derechos" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">10. Tus derechos y cómo ejercerlos</h2>
-        <p class="mt-4">Sobre la información que tenemos de vos, podés pedirnos:</p>
+      <section id="rights" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">10. Your privacy rights</h2>
+        <p class="mt-4">
+          We extend the following rights to <span class="font-medium text-slate-900">every visitor</span>,
+          not only to residents of states that already mandate them:
+        </p>
         <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-slate-400">
-          <li><span class="font-medium text-slate-900">Acceso:</span> saber qué datos tuyos tenemos y qué hacemos con ellos.</li>
-          <li><span class="font-medium text-slate-900">Rectificación:</span> corregir datos inexactos o incompletos.</li>
-          <li><span class="font-medium text-slate-900">Supresión:</span> eliminar tus datos cuando ya no sean necesarios.</li>
-          <li><span class="font-medium text-slate-900">Oposición:</span> pedir que dejemos de tratarlos para una finalidad concreta.</li>
-          <li><span class="font-medium text-slate-900">Limitación:</span> pedir que suspendamos el tratamiento mientras se resuelve una controversia.</li>
-          <li><span class="font-medium text-slate-900">Portabilidad:</span> recibir una copia de tus datos en un formato de uso común.</li>
-          <li><span class="font-medium text-slate-900">Retiro del consentimiento:</span> revocar en cualquier momento el permiso que nos diste, sin que eso afecte lo hecho antes.</li>
+          <li><span class="font-medium text-slate-900">Know and access:</span> find out what information we hold about you and what we do with it.</li>
+          <li><span class="font-medium text-slate-900">Correct:</span> fix information that is inaccurate or incomplete.</li>
+          <li><span class="font-medium text-slate-900">Delete:</span> have your information erased when we no longer need it.</li>
+          <li><span class="font-medium text-slate-900">Opt out:</span> tell us to stop processing your information for a specific purpose.</li>
+          <li><span class="font-medium text-slate-900">Portability:</span> receive a copy of your information in a common, machine-readable format.</li>
+          <li><span class="font-medium text-slate-900">Withdraw consent:</span> revoke permission you gave us, without affecting what was done beforehand.</li>
+          <li><span class="font-medium text-slate-900">No retaliation:</span> we will never charge you a different price or degrade your service for exercising any of these.</li>
         </ul>
+        <p class="mt-4">
+          Because we do not sell or share personal information for cross-context behavioral advertising,
+          there is no "Do Not Sell or Share My Personal Information" process to run — but if that ever
+          changes, we will add one and say so here before it takes effect.
+        </p>
 
         <div class="mt-6 rounded-lg border border-emerald-200 bg-emerald-50 p-5">
-          <p class="font-semibold text-slate-900">Cómo hacer la solicitud</p>
+          <p class="font-semibold text-slate-900">How to make a request</p>
           <p class="mt-2 text-slate-700">
-            Escribinos a
-            <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-800 underline underline-offset-2">{{ correoPrivacidad }}</a>
-            indicando qué derecho querés ejercer y desde qué correo nos contactaste. Podemos pedirte que
-            confirmés tu identidad antes de responder, para no entregarle tus datos a otra persona.
+            Email
+            <a [href]="'mailto:' + privacyEmail" class="font-medium text-emerald-800 underline underline-offset-2">{{ privacyEmail }}</a>
+            telling us which right you want to exercise and which email address you contacted us from. We
+            may ask you to confirm your identity so we do not hand your data to someone else.
           </p>
           <p class="mt-2 text-slate-700">
-            Respondemos en un plazo máximo de <span class="font-medium">15 días hábiles</span>. El trámite
-            es gratuito.
+            We respond within <span class="font-medium">45 days</span>, and will tell you if we need a
+            single extension. There is no charge.
+          </p>
+          <p class="mt-2 text-slate-700">
+            You may use an authorized agent to submit a request on your behalf; we will ask for proof of
+            their authority.
           </p>
         </div>
 
         <p class="mt-4">
-          Para dejar de recibir comunicaciones comerciales no hace falta escribir: podés usar el enlace de
-          baja que aparece al final de cada correo.
+          To stop marketing email you do not need to write to us: use the unsubscribe link at the bottom
+          of any message, as provided under the CAN-SPAM Act.
         </p>
       </section>
 
       <!-- 11 -->
-      <section id="menores" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">11. Menores de edad</h2>
+      <section id="children" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">11. Children’s privacy</h2>
         <p class="mt-4">
-          {{ marca }} es un producto dirigido a empresas y profesionales. Este sitio no está pensado para
-          menores de 18 años y no recopilamos datos de forma consciente de personas menores de esa edad.
-          Si detectamos que recibimos datos de un menor, los eliminamos. Si sos madre, padre o tutor y
-          creés que nos llegó información de un menor a tu cargo, escribinos a
-          <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>.
+          {{ brand }} is a product for businesses and professionals. This site is not directed to children
+          and we do not knowingly collect personal information from anyone under 18, or from children
+          under 13 as defined by the Children's Online Privacy Protection Act (COPPA). If we learn that we
+          have received information from a child, we delete it. If you are a parent or guardian and
+          believe a child in your care sent us information, email
+          <a [href]="'mailto:' + privacyEmail" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ privacyEmail }}</a>.
         </p>
       </section>
 
       <!-- 12 -->
-      <section id="enlaces" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">12. Enlaces a sitios de terceros</h2>
+      <section id="links" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">12. Third-party links</h2>
         <p class="mt-4">
-          Nuestro sitio puede enlazar a páginas que no controlamos: redes sociales, documentación de
-          integraciones, artículos externos. Una vez que salís de {{ sitio }}, tus datos se rigen por la
-          política de privacidad de ese sitio, no por esta. Te recomendamos leerla.
+          Our site links to pages we do not control: social networks, integration documentation, external
+          articles. Once you leave {{ site }}, your information is governed by that site's privacy policy,
+          not this one. We recommend reading it.
         </p>
       </section>
 
       <!-- 13 -->
-      <section id="marco-legal" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">13. Marco legal aplicable</h2>
+      <section id="legal" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">13. Governing law</h2>
         <p class="mt-4">
-          Esta política se rige por las leyes de la República de Guatemala. A la fecha de su última
-          actualización, Guatemala no cuenta con una ley general de protección de datos personales, por lo
-          que el tratamiento se enmarca principalmente en:
+          This policy is governed by the laws of the Commonwealth of Massachusetts and the applicable
+          federal laws of the United States. There is no single comprehensive federal privacy statute in
+          the U.S.; instead, the following apply to a site like ours:
         </p>
         <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-slate-400">
           <li>
-            <span class="font-medium text-slate-900">Constitución Política de la República de Guatemala</span>,
-            artículos 24 y 31 (inviolabilidad de la correspondencia y documentos, y derecho a conocer y
-            corregir la información que sobre uno conste en registros).
+            <span class="font-medium text-slate-900">201 CMR 17.00</span> — Massachusetts standards for
+            protecting the personal information of Commonwealth residents, which require a written
+            information security program.
           </li>
           <li>
-            <span class="font-medium text-slate-900">Ley de Acceso a la Información Pública, Decreto 57-2008</span>,
-            que define los datos personales y sensibles, reconoce el <em>habeas data</em> y prohíbe la
-            comercialización de datos personales sin consentimiento expreso por escrito.
+            <span class="font-medium text-slate-900">M.G.L. c. 93H and c. 93I</span> — Massachusetts data
+            breach notification and secure destruction of records containing personal information.
           </li>
           <li>
-            <span class="font-medium text-slate-900">Ley para el Reconocimiento de las Comunicaciones y Firmas Electrónicas, Decreto 47-2008</span>,
-            en lo relativo a comunicaciones electrónicas.
+            <span class="font-medium text-slate-900">CAN-SPAM Act</span> — rules for commercial email,
+            including a working unsubscribe mechanism.
           </li>
           <li>
-            <span class="font-medium text-slate-900">Ley de Protección al Consumidor y Usuario, Decreto 006-2003</span>,
-            en lo relativo a la información y las comunicaciones comerciales.
+            <span class="font-medium text-slate-900">COPPA</span> — protection of children under 13
+            online.
+          </li>
+          <li>
+            <span class="font-medium text-slate-900">FTC Act, Section 5</span> — which makes this policy
+            enforceable: we have to do what it says.
           </li>
         </ul>
         <p class="mt-4">
-          Adicionalmente, y de forma voluntaria, adoptamos principios reconocidos internacionalmente
-          —licitud, finalidad, minimización, exactitud, limitación del plazo, integridad y
-          responsabilidad proactiva— como estándar de trabajo, aunque no estemos obligados a ello.
+          Massachusetts does not yet have a comprehensive consumer privacy statute. A Massachusetts Data
+          Privacy Act has passed both chambers of the legislature in separate versions and is being
+          reconciled as of the date of this policy. We have written the rights in section 10 to meet what
+          that bill and comparable state laws — such as the California Consumer Privacy Act — would
+          require, so nothing about how we treat you needs to change when one of them takes effect.
         </p>
         <p class="mt-4">
-          Si sos residente de la Unión Europea o del Reino Unido y considerás que tus datos no se están
-          tratando correctamente, podés ejercer los derechos de la sección 10 escribiéndonos, sin
-          perjuicio de acudir a la autoridad de control de tu país.
+          If you are a resident of California, Colorado, Connecticut, Virginia or another state with a
+          comprehensive privacy law, exercise your rights through section 10 and tell us which state you
+          are in; we will apply whatever that law adds. If you are in the European Union or the United
+          Kingdom, the same channel applies, without prejudice to your right to complain to your national
+          supervisory authority.
         </p>
       </section>
 
       <!-- 14 -->
-      <section id="cambios" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">14. Cambios a esta política</h2>
+      <section id="changes" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">14. Changes to this policy</h2>
         <p class="mt-4">
-          Podemos actualizar esta política cuando cambien nuestras prácticas, las herramientas que usamos o
-          la legislación aplicable. La versión vigente siempre será la publicada en
-          <span class="font-medium text-slate-900">{{ sitio }}/privacidad</span>, con su fecha de última
-          actualización al inicio.
+          We may update this policy when our practices, our tools or the applicable law change. The
+          current version will always be the one published at
+          <span class="font-medium text-slate-900">{{ site }}/privacidad</span>, with its last-updated
+          date at the top.
         </p>
         <p class="mt-4">
-          Si el cambio es sustancial —por ejemplo, una nueva finalidad de uso— lo anunciaremos en el sitio
-          y, si tenemos tu correo por una suscripción activa, te avisaremos por esa vía antes de que entre
-          en vigor.
+          If a change is material — a new purpose for using your information, for example — we will
+          announce it on the site and, if we have your email from an active subscription, notify you there
+          before it takes effect.
         </p>
       </section>
 
       <!-- 15 -->
-      <section id="contacto" class="scroll-mt-24">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900">15. Contacto</h2>
+      <section id="contact" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">15. Contact us</h2>
         <p class="mt-4">
-          Para cualquier duda, solicitud o reclamo sobre privacidad y datos personales:
+          For any question, request or complaint about privacy and personal information:
         </p>
         <div class="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-5">
-          <p class="font-semibold text-slate-900">{{ marca }}</p>
+          <p class="font-semibold text-slate-900">{{ addressLines[0] }}</p>
           <p class="mt-1">
-            <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>
+            <a [href]="'mailto:' + privacyEmail" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ privacyEmail }}</a>
           </p>
-          <p class="mt-1 text-slate-600">Guatemala</p>
+          <address class="mt-2 not-italic text-slate-600">
+            51 Pleasant St # 1117<br>
+            Malden, MA 02148<br>
+            United States
+          </address>
         </div>
       </section>
 
-      <!-- Cierre -->
+      <!-- Close -->
       <div class="border-t border-slate-200 pt-8">
         <p class="text-sm text-slate-500">
-          Última actualización: {{ ultimaActualizacion }}.
+          Last updated: {{ lastUpdated }}.
         </p>
         <a routerLink="/"
            class="mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800">
-          Volver al inicio
+          Back to home
         </a>
       </div>
 
