@@ -1,1 +1,66 @@
-<p>footer works!</p>
+<footer id="contact" class="bg-emerald-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid md:grid-cols-2 gap-10">
+    <div>
+      <div class="flex items-center mb-4">
+        <span class="inline-block h-9 w-9 rounded-xl bg-white/10 flex items-center justify-center text-white">
+          <i class="fa-solid fa-clipboard-check"></i>
+        </span>
+        <span class="ml-3 text-xl font-extrabold">M.I.A Tracker</span>
+      </div>
+      <p class="text-emerald-100 max-w-md">The all-in-one platform for Maintenance, Inventory & Assets. Visibility, traceability and control—anywhere.</p>
+
+      <!-- DIRECCIÓN FÍSICA -->
+      <div class="mt-6 flex items-start space-x-3">
+        <i class="fa-solid fa-location-dot text-emerald-300 text-xl mt-1"></i>
+        <div class="text-emerald-100">
+          <p>MIA Tracker</p>
+          <p>51 Pleasant St # 1117</p>
+          <p>Malden, MA 02148</p>
+          <p>United States</p>
+        </div>
+      </div>
+
+      <p class="mt-6 text-emerald-200 text-sm">© 2025 M.I.A Tracker. All rights reserved.</p>
+    </div>
+
+    <!-- FORMULARIO CON FORMSUBMIT.CO -->
+    <form action="https://formsubmit.co/mcabrerasos@miatracker.com" method="POST" class="bg-white text-slate-800 p-6 rounded-2xl border border-emerald-200 shadow">
+      <input type="hidden" name="_next" value="https://www.miatracker.com/">
+      <h3 class="text-lg font-bold text-emerald-800">Contact us</h3>
+
+      <!-- FormSubmit Configuration -->
+      <input type="hidden" name="_subject" value="New contact from M.I.A Tracker!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="mt-4 grid gap-3">
+        <input type="text" name="name" placeholder="Name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        <textarea rows="4" name="message" placeholder="Message" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+        <button type="submit" class="px-5 py-3 rounded-xl bg-emerald-700 text-white hover:bg-emerald-800 transition-colors duration-200">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- BARRA INFERIOR - CRÉDITO -->
+  <div class="border-t border-emerald-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 text-center">
+      <p class="text-sm text-emerald-200">
+        Hecho por
+        <a
+          href="https://www.techsolutionsgt.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-semibold text-white hover:text-lime-300 transition-colors"
+        >
+          Tech Solutions GT
+        </a>
+      </p>
+      <p class="mt-2 text-sm">
+        <a [routerLink]="['/privacidad']" class="text-emerald-200 hover:text-lime-300 transition-colors">
+          Política de Privacidad
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,486 @@
+<!--
+  Política de Privacidad — M.I.A Tracker
+  Acento: emerald + lime, igual que el navbar y el footer del landing.
+  El pt-16 del <article> compensa el header fijo (h-16).
+-->
+
+<article class="bg-white text-slate-700 pt-16">
+
+  <!-- ============ Encabezado ============ -->
+  <header class="bg-emerald-900">
+    <div class="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+      <a routerLink="/"
+         class="inline-flex items-center gap-2 text-sm font-medium text-lime-300 hover:text-lime-200">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Volver al inicio
+      </a>
+
+      <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+        Política de Privacidad
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-emerald-100">
+        Cómo {{ marca }} recopila, usa y protege la información de las personas que visitan
+        <span class="text-white">miatracker.com</span>.
+      </p>
+
+      <dl class="mt-8 flex flex-wrap gap-x-10 gap-y-3 text-sm">
+        <div>
+          <dt class="text-emerald-300">Última actualización</dt>
+          <dd class="mt-0.5 font-medium text-white">{{ ultimaActualizacion }}</dd>
+        </div>
+        <div>
+          <dt class="text-emerald-300">Vigente desde</dt>
+          <dd class="mt-0.5 font-medium text-white">{{ vigenciaDesde }}</dd>
+        </div>
+        <div>
+          <dt class="text-emerald-300">Contacto</dt>
+          <dd class="mt-0.5 font-medium text-white">
+            <a [href]="'mailto:' + correoPrivacidad" class="hover:text-lime-200">{{ correoPrivacidad }}</a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+
+  <!-- ============ Cuerpo ============ -->
+  <div class="mx-auto max-w-5xl px-6 py-12 lg:flex lg:gap-12 lg:py-16">
+
+    <!-- Índice -->
+    <nav class="mb-12 lg:mb-0 lg:w-64 lg:shrink-0" aria-label="Índice de la política">
+      <div class="lg:sticky lg:top-24">
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Contenido</p>
+        <ul class="mt-4 space-y-1 border-l border-slate-200">
+          <li *ngFor="let s of secciones">
+            <a [href]="'#' + s.id"
+               class="block border-l-2 border-transparent -ml-px py-1.5 pl-4 text-sm text-slate-600 hover:border-emerald-600 hover:text-emerald-700">
+              {{ s.titulo }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Texto -->
+    <div class="min-w-0 flex-1 space-y-12 text-base leading-7">
+
+      <p class="rounded-lg border border-slate-200 bg-slate-50 p-5 text-slate-600">
+        Esta política explica en lenguaje claro qué pasa con tu información cuando navegás nuestro
+        sitio web o nos escribís por el formulario de contacto. Si algo no te queda claro, escribinos
+        a <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>
+        y te lo explicamos.
+      </p>
+
+      <!-- 1 -->
+      <section id="responsable" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">1. Quiénes somos</h2>
+        <p class="mt-4">
+          {{ marca }} (<em>Maintenance, Inventory &amp; Asset Tracker</em>) es una solución de control de
+          inventario y activos mediante códigos de barras. Somos los responsables del tratamiento de los
+          datos personales que se recopilan a través de este sitio web.
+        </p>
+        <ul class="mt-4 space-y-1">
+          <li><span class="font-medium text-slate-900">Responsable:</span> {{ marca }}</li>
+          <li><span class="font-medium text-slate-900">Sitio web:</span> {{ sitio }}</li>
+          <li><span class="font-medium text-slate-900">País de operación:</span> Guatemala</li>
+          <li>
+            <span class="font-medium text-slate-900">Correo de privacidad:</span>
+            <a [href]="'mailto:' + correoPrivacidad" class="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 2 -->
+      <section id="alcance" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">2. Alcance de esta política</h2>
+        <p class="mt-4">
+          Esta política aplica <span class="font-medium text-slate-900">al sitio web público</span>
+          {{ sitio }} y a todas sus páginas: la página de inicio, las páginas de producto y precios, el
+          formulario de contacto y las solicitudes de demostración.
+        </p>
+        <p class="mt-4">
+          No cubre el tratamiento de datos dentro de la aplicación {{ marca }} una vez que un cliente
+          contrata el servicio: eso se rige por el contrato de servicio y su acuerdo de tratamiento de
+          datos correspondiente. Tampoco cubre sitios de terceros a los que enlacemos.
+        </p>
+      </section>
+
+      <!-- 3 -->
+      <section id="datos" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">3. Qué datos recopilamos</h2>
+
+        <h3 class="mt-6 text-lg font-semibold text-slate-900">3.1 Datos que nos das voluntariamente</h3>
+        <p class="mt-3">
+          Cuando llenás el formulario de contacto, pedís una demostración o te suscribís a novedades,
+          recopilamos únicamente lo que escribís en esos campos:
+        </p>
+        <ul class="mt-3 list-disc space-y-1 pl-6 marker:text-slate-400">
+          <li>Nombre y apellido</li>
+          <li>Correo electrónico</li>
+          <li>Teléfono (opcional)</li>
+          <li>Empresa, cargo y tamaño de la operación (opcional)</li>
+          <li>El contenido del mensaje que nos enviás</li>
+        </ul>
+        <p class="mt-3 text-slate-600">
+          Te pedimos que <span class="font-medium text-slate-900">no incluyas información sensible</span>
+          (datos de salud, financieros, documentos de identidad) en el campo de mensaje. No la necesitamos
+          para atenderte.
+        </p>
+
+        <h3 class="mt-8 text-lg font-semibold text-slate-900">3.2 Datos que se recopilan automáticamente</h3>
+        <p class="mt-3">
+          Como cualquier sitio web, nuestro servidor y nuestras herramientas de medición registran datos
+          técnicos de la visita:
+        </p>
+        <ul class="mt-3 list-disc space-y-1 pl-6 marker:text-slate-400">
+          <li>Dirección IP (que puede usarse para deducir el país o la ciudad aproximada)</li>
+          <li>Tipo de navegador, sistema operativo y tipo de dispositivo</li>
+          <li>Páginas visitadas, tiempo de permanencia y orden de navegación</li>
+          <li>Página o campaña desde la que llegaste (<em>referrer</em>, parámetros UTM)</li>
+          <li>Fecha y hora de la visita</li>
+        </ul>
+
+        <h3 class="mt-8 text-lg font-semibold text-slate-900">3.3 Qué NO hacemos</h3>
+        <ul class="mt-3 list-disc space-y-1 pl-6 marker:text-slate-400">
+          <li>No vendemos ni alquilamos tus datos personales a nadie.</li>
+          <li>No compramos bases de datos de contactos para hacer prospección.</li>
+          <li>No usamos tus datos para tomar decisiones automatizadas con efectos legales sobre vos.</li>
+        </ul>
+      </section>
+
+      <!-- 4 -->
+      <section id="finalidades" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">4. Para qué usamos los datos</h2>
+        <div class="mt-4 overflow-x-auto">
+          <table class="w-full min-w-[36rem] border-collapse text-left text-sm">
+            <thead>
+              <tr class="border-b border-slate-300">
+                <th class="py-3 pr-4 font-semibold text-slate-900">Finalidad</th>
+                <th class="py-3 pr-4 font-semibold text-slate-900">Datos usados</th>
+                <th class="py-3 font-semibold text-slate-900">Legitimación</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr>
+                <td class="py-3 pr-4 align-top">Responder tu consulta o coordinar una demostración</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Datos del formulario</td>
+                <td class="py-3 align-top text-slate-600">Tu consentimiento al enviarlo / relación precontractual</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Enviarte una cotización o propuesta comercial</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Datos del formulario</td>
+                <td class="py-3 align-top text-slate-600">Relación precontractual a petición tuya</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Mandarte novedades del producto o material comercial</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Correo electrónico y nombre</td>
+                <td class="py-3 align-top text-slate-600">Consentimiento expreso, revocable en cualquier momento</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Medir el uso del sitio y mejorar el contenido</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Datos técnicos y de navegación, agregados</td>
+                <td class="py-3 align-top text-slate-600">Interés legítimo en mantener y mejorar el sitio</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Prevenir abuso, spam y ataques al sitio</td>
+                <td class="py-3 pr-4 align-top text-slate-600">IP y registros del servidor</td>
+                <td class="py-3 align-top text-slate-600">Interés legítimo en la seguridad del servicio</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Cumplir obligaciones legales o requerimientos de autoridad</td>
+                <td class="py-3 pr-4 align-top text-slate-600">Los que la ley exija</td>
+                <td class="py-3 align-top text-slate-600">Obligación legal</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4">
+          Si en algún momento quisiéramos usar tus datos para una finalidad distinta de las anteriores,
+          te lo informaremos y, cuando corresponda, te pediremos tu consentimiento antes de hacerlo.
+        </p>
+      </section>
+
+      <!-- 5 -->
+      <section id="cookies" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">5. Cookies y tecnologías similares</h2>
+        <p class="mt-4">
+          Una cookie es un archivo pequeño que el sitio guarda en tu navegador para recordar algo entre
+          una página y otra. Usamos tres tipos:
+        </p>
+
+        <div class="mt-6 space-y-4">
+          <div class="rounded-lg border border-slate-200 p-5">
+            <p class="font-semibold text-slate-900">Cookies necesarias</p>
+            <p class="mt-1 text-slate-600">
+              Permiten que el sitio funcione: mantener tu preferencia de idioma, recordar que ya cerraste
+              el aviso de cookies, proteger los formularios contra envíos automatizados. No se pueden
+              desactivar sin romper el sitio y no requieren tu consentimiento.
+            </p>
+          </div>
+          <div class="rounded-lg border border-slate-200 p-5">
+            <p class="font-semibold text-slate-900">Cookies de analítica</p>
+            <p class="mt-1 text-slate-600">
+              Nos dicen cuántas personas visitan cada página y por dónde navegan, de forma agregada. Las
+              usamos para saber qué contenido sirve y cuál no. Podés rechazarlas sin perder ninguna
+              funcionalidad.
+            </p>
+          </div>
+          <div class="rounded-lg border border-slate-200 p-5">
+            <p class="font-semibold text-slate-900">Cookies de marketing</p>
+            <p class="mt-1 text-slate-600">
+              Permiten medir el resultado de nuestras campañas y mostrar anuncios relevantes en otras
+              plataformas. Solo se activan si las aceptás.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="mt-8 text-lg font-semibold text-slate-900">Cómo controlarlas</h3>
+        <p class="mt-3">
+          Podés cambiar tu decisión cuando querás desde el aviso de cookies del sitio, o borrarlas y
+          bloquearlas desde la configuración de tu navegador (Chrome, Safari, Firefox y Edge lo permiten
+          en la sección de privacidad). Si las bloqueás todas, algunas partes del sitio pueden dejar de
+          comportarse como esperás.
+        </p>
+      </section>
+
+      <!-- 6 -->
+      <section id="terceros" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">6. Con quién compartimos los datos</h2>
+        <p class="mt-4">
+          No vendemos tu información. La compartimos únicamente con proveedores que nos prestan servicios
+          y que solo pueden usarla siguiendo nuestras instrucciones:
+        </p>
+        <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-slate-400">
+          <li><span class="font-medium text-slate-900">Proveedores de hosting e infraestructura</span>, que alojan el sitio y sus registros.</li>
+          <li><span class="font-medium text-slate-900">Proveedores de correo electrónico</span>, para recibir y responder tus mensajes.</li>
+          <li><span class="font-medium text-slate-900">Herramientas de analítica web</span>, para medir el uso del sitio.</li>
+          <li><span class="font-medium text-slate-900">CRM y herramientas de gestión comercial</span>, para dar seguimiento a tu solicitud.</li>
+          <li><span class="font-medium text-slate-900">Plataformas de publicidad</span>, únicamente si aceptaste las cookies de marketing.</li>
+        </ul>
+        <p class="mt-4">
+          También podemos divulgar información cuando una autoridad competente lo requiera conforme a la
+          ley, o cuando sea necesario para defender nuestros derechos legales.
+        </p>
+        <p class="mt-4 text-slate-600">
+          Si querés el detalle de los proveedores concretos que utilizamos en este momento, pedilo a
+          <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>
+          y te lo damos.
+        </p>
+      </section>
+
+      <!-- 7 -->
+      <section id="transferencias" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">7. Transferencias internacionales</h2>
+        <p class="mt-4">
+          Varios de los servicios que usamos (hosting, correo, analítica) operan servidores fuera de
+          Guatemala, principalmente en Estados Unidos y la Unión Europea. Eso significa que tu información
+          puede almacenarse o procesarse en esos países.
+        </p>
+        <p class="mt-4">
+          Cuando eso ocurre, escogemos proveedores que ofrecen garantías contractuales de seguridad y
+          confidencialidad equivalentes a las que aplicamos nosotros.
+        </p>
+      </section>
+
+      <!-- 8 -->
+      <section id="conservacion" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">8. Cuánto tiempo conservamos los datos</h2>
+        <div class="mt-4 overflow-x-auto">
+          <table class="w-full min-w-[30rem] border-collapse text-left text-sm">
+            <thead>
+              <tr class="border-b border-slate-300">
+                <th class="py-3 pr-4 font-semibold text-slate-900">Tipo de dato</th>
+                <th class="py-3 font-semibold text-slate-900">Plazo de conservación</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr>
+                <td class="py-3 pr-4 align-top">Consultas del formulario que no derivan en negocio</td>
+                <td class="py-3 align-top text-slate-600">24 meses desde el último contacto</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Contactos suscritos a comunicaciones comerciales</td>
+                <td class="py-3 align-top text-slate-600">Hasta que retirés tu consentimiento</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Registros técnicos del servidor</td>
+                <td class="py-3 align-top text-slate-600">Hasta 12 meses</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Datos de analítica agregados</td>
+                <td class="py-3 align-top text-slate-600">Hasta 26 meses</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Documentación con obligación legal o contable</td>
+                <td class="py-3 align-top text-slate-600">El plazo que exija la ley aplicable</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4">
+          Cumplido el plazo, la información se elimina o se anonimiza de forma que ya no permita
+          identificarte.
+        </p>
+      </section>
+
+      <!-- 9 -->
+      <section id="seguridad" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">9. Seguridad de la información</h2>
+        <p class="mt-4">
+          Aplicamos medidas técnicas y organizativas razonables para proteger tu información:
+        </p>
+        <ul class="mt-4 list-disc space-y-1 pl-6 marker:text-slate-400">
+          <li>Cifrado en tránsito mediante HTTPS/TLS en todo el sitio.</li>
+          <li>Acceso a los datos restringido al personal que lo necesita para su trabajo.</li>
+          <li>Autenticación reforzada en las herramientas donde se guardan los contactos.</li>
+          <li>Respaldos periódicos y actualización de los componentes del sitio.</li>
+        </ul>
+        <p class="mt-4">
+          Ningún sistema conectado a internet es invulnerable. Si llegara a ocurrir un incidente de
+          seguridad que afecte de forma significativa tus datos personales, te lo notificaremos por
+          correo electrónico a la brevedad, junto con lo que estemos haciendo para contenerlo.
+        </p>
+      </section>
+
+      <!-- 10 -->
+      <section id="derechos" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">10. Tus derechos y cómo ejercerlos</h2>
+        <p class="mt-4">Sobre la información que tenemos de vos, podés pedirnos:</p>
+        <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-slate-400">
+          <li><span class="font-medium text-slate-900">Acceso:</span> saber qué datos tuyos tenemos y qué hacemos con ellos.</li>
+          <li><span class="font-medium text-slate-900">Rectificación:</span> corregir datos inexactos o incompletos.</li>
+          <li><span class="font-medium text-slate-900">Supresión:</span> eliminar tus datos cuando ya no sean necesarios.</li>
+          <li><span class="font-medium text-slate-900">Oposición:</span> pedir que dejemos de tratarlos para una finalidad concreta.</li>
+          <li><span class="font-medium text-slate-900">Limitación:</span> pedir que suspendamos el tratamiento mientras se resuelve una controversia.</li>
+          <li><span class="font-medium text-slate-900">Portabilidad:</span> recibir una copia de tus datos en un formato de uso común.</li>
+          <li><span class="font-medium text-slate-900">Retiro del consentimiento:</span> revocar en cualquier momento el permiso que nos diste, sin que eso afecte lo hecho antes.</li>
+        </ul>
+
+        <div class="mt-6 rounded-lg border border-emerald-200 bg-emerald-50 p-5">
+          <p class="font-semibold text-slate-900">Cómo hacer la solicitud</p>
+          <p class="mt-2 text-slate-700">
+            Escribinos a
+            <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-800 underline underline-offset-2">{{ correoPrivacidad }}</a>
+            indicando qué derecho querés ejercer y desde qué correo nos contactaste. Podemos pedirte que
+            confirmés tu identidad antes de responder, para no entregarle tus datos a otra persona.
+          </p>
+          <p class="mt-2 text-slate-700">
+            Respondemos en un plazo máximo de <span class="font-medium">15 días hábiles</span>. El trámite
+            es gratuito.
+          </p>
+        </div>
+
+        <p class="mt-4">
+          Para dejar de recibir comunicaciones comerciales no hace falta escribir: podés usar el enlace de
+          baja que aparece al final de cada correo.
+        </p>
+      </section>
+
+      <!-- 11 -->
+      <section id="menores" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">11. Menores de edad</h2>
+        <p class="mt-4">
+          {{ marca }} es un producto dirigido a empresas y profesionales. Este sitio no está pensado para
+          menores de 18 años y no recopilamos datos de forma consciente de personas menores de esa edad.
+          Si detectamos que recibimos datos de un menor, los eliminamos. Si sos madre, padre o tutor y
+          creés que nos llegó información de un menor a tu cargo, escribinos a
+          <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>.
+        </p>
+      </section>
+
+      <!-- 12 -->
+      <section id="enlaces" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">12. Enlaces a sitios de terceros</h2>
+        <p class="mt-4">
+          Nuestro sitio puede enlazar a páginas que no controlamos: redes sociales, documentación de
+          integraciones, artículos externos. Una vez que salís de {{ sitio }}, tus datos se rigen por la
+          política de privacidad de ese sitio, no por esta. Te recomendamos leerla.
+        </p>
+      </section>
+
+      <!-- 13 -->
+      <section id="marco-legal" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">13. Marco legal aplicable</h2>
+        <p class="mt-4">
+          Esta política se rige por las leyes de la República de Guatemala. A la fecha de su última
+          actualización, Guatemala no cuenta con una ley general de protección de datos personales, por lo
+          que el tratamiento se enmarca principalmente en:
+        </p>
+        <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-slate-400">
+          <li>
+            <span class="font-medium text-slate-900">Constitución Política de la República de Guatemala</span>,
+            artículos 24 y 31 (inviolabilidad de la correspondencia y documentos, y derecho a conocer y
+            corregir la información que sobre uno conste en registros).
+          </li>
+          <li>
+            <span class="font-medium text-slate-900">Ley de Acceso a la Información Pública, Decreto 57-2008</span>,
+            que define los datos personales y sensibles, reconoce el <em>habeas data</em> y prohíbe la
+            comercialización de datos personales sin consentimiento expreso por escrito.
+          </li>
+          <li>
+            <span class="font-medium text-slate-900">Ley para el Reconocimiento de las Comunicaciones y Firmas Electrónicas, Decreto 47-2008</span>,
+            en lo relativo a comunicaciones electrónicas.
+          </li>
+          <li>
+            <span class="font-medium text-slate-900">Ley de Protección al Consumidor y Usuario, Decreto 006-2003</span>,
+            en lo relativo a la información y las comunicaciones comerciales.
+          </li>
+        </ul>
+        <p class="mt-4">
+          Adicionalmente, y de forma voluntaria, adoptamos principios reconocidos internacionalmente
+          —licitud, finalidad, minimización, exactitud, limitación del plazo, integridad y
+          responsabilidad proactiva— como estándar de trabajo, aunque no estemos obligados a ello.
+        </p>
+        <p class="mt-4">
+          Si sos residente de la Unión Europea o del Reino Unido y considerás que tus datos no se están
+          tratando correctamente, podés ejercer los derechos de la sección 10 escribiéndonos, sin
+          perjuicio de acudir a la autoridad de control de tu país.
+        </p>
+      </section>
+
+      <!-- 14 -->
+      <section id="cambios" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">14. Cambios a esta política</h2>
+        <p class="mt-4">
+          Podemos actualizar esta política cuando cambien nuestras prácticas, las herramientas que usamos o
+          la legislación aplicable. La versión vigente siempre será la publicada en
+          <span class="font-medium text-slate-900">{{ sitio }}/privacidad</span>, con su fecha de última
+          actualización al inicio.
+        </p>
+        <p class="mt-4">
+          Si el cambio es sustancial —por ejemplo, una nueva finalidad de uso— lo anunciaremos en el sitio
+          y, si tenemos tu correo por una suscripción activa, te avisaremos por esa vía antes de que entre
+          en vigor.
+        </p>
+      </section>
+
+      <!-- 15 -->
+      <section id="contacto" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">15. Contacto</h2>
+        <p class="mt-4">
+          Para cualquier duda, solicitud o reclamo sobre privacidad y datos personales:
+        </p>
+        <div class="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-5">
+          <p class="font-semibold text-slate-900">{{ marca }}</p>
+          <p class="mt-1">
+            <a [href]="'mailto:' + correoPrivacidad" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ correoPrivacidad }}</a>
+          </p>
+          <p class="mt-1 text-slate-600">Guatemala</p>
+        </div>
+      </section>
+
+      <!-- Cierre -->
+      <div class="border-t border-slate-200 pt-8">
+        <p class="text-sm text-slate-500">
+          Última actualización: {{ ultimaActualizacion }}.
+        </p>
+        <a routerLink="/"
+           class="mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800">
+          Volver al inicio
+        </a>
+      </div>
+
+    </div>
+  </div>
+</article>
