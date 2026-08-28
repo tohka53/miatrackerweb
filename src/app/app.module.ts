@@ -12,6 +12,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 // Páginas
 import { HomeComponent } from './pages/home/home.component';
 import { PrivacidadComponent } from './pages/privacidad/privacidad.component';
+import { DeleteAccountComponent } from './pages/delete-account/delete-account.component';
 
 // Live chat (usado en app.component.html con <app-live-chat>)
 import { LiveChatModule } from './components/live-chat/live-chat.module';
@@ -22,7 +23,8 @@ import { LiveChatModule } from './components/live-chat/live-chat.module';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    PrivacidadComponent
+    PrivacidadComponent,
+    DeleteAccountComponent
   ],
   imports: [
     BrowserModule,

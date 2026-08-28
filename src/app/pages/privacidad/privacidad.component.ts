@@ -9,8 +9,8 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class PrivacidadComponent implements OnInit {
   /** Update this date every time the policy text changes. */
-  readonly lastUpdated = 'August 26, 2026';
-  readonly effectiveDate = 'August 26, 2026';
+  readonly lastUpdated = 'August 28, 2026';
+  readonly effectiveDate = 'August 28, 2026';
 
   readonly brand = 'M.I.A Tracker';
   readonly site = 'https://www.miatracker.com';

@@ -94,15 +94,56 @@
       <!-- 2 -->
       <section id="scope" class="scroll-mt-24">
         <h2 class="text-2xl font-bold tracking-tight text-slate-900">2. Scope of this policy</h2>
-        <p class="mt-4">
+
+        <h3 class="mt-6 text-lg font-semibold text-slate-900">2.1 This website</h3>
+        <p class="mt-3">
           This policy covers the <span class="font-medium text-slate-900">public website</span>
           {{ site }} and all of its pages: the home page, product and pricing pages, the contact form and
-          demo requests.
+          demo requests. It does not cover third-party sites we link to.
         </p>
-        <p class="mt-4">
-          It does not cover how data is handled inside the {{ brand }} application once a customer
-          subscribes — that is governed by the service agreement and its data processing terms. It also
-          does not cover third-party sites we link to.
+
+        <h3 class="mt-8 text-lg font-semibold text-slate-900">2.2 The {{ brand }} mobile application</h3>
+        <p class="mt-3">
+          It also covers the {{ brand }} mobile application for Android and iOS. Inside the app we collect
+          only what is needed to run the service for the organization you work for:
+        </p>
+        <ul class="mt-3 list-disc space-y-1 pl-6 marker:text-slate-400">
+          <li>
+            <span class="font-medium text-slate-900">Account and profile:</span> email address,
+            authentication credentials, name, username, profile photo, company and assigned role.
+          </li>
+          <li>
+            <span class="font-medium text-slate-900">Operational data you enter:</span> products, barcodes
+            and QR codes, quantities and stock levels, storage locations and their coordinates, assets,
+            maintenance records, orders, transfers, restock requests and notes.
+          </li>
+          <li>
+            <span class="font-medium text-slate-900">Photos you attach</span> to items, assets or movement
+            records.
+          </li>
+          <li>
+            <span class="font-medium text-slate-900">Device permissions:</span> camera (to scan barcodes and
+            QR codes), photo library (to attach images), notifications (low-stock alerts) and location (to
+            tag a storage location or a maintenance visit). Each one is requested in context and can be
+            denied; only the feature that depends on it stops working.
+          </li>
+        </ul>
+        <p class="mt-3">
+          Application data is stored with <span class="font-medium text-slate-900">Supabase</span>, our
+          hosted database, authentication and file storage provider, which processes it on our behalf and
+          under our instructions. The app contains no advertising SDKs, no third-party analytics and no
+          cross-app tracking, and we do not sell or share the information it holds.
+        </p>
+        <p class="mt-3">
+          You can delete your account and its data at any time from inside the app, or by request:
+          see
+          <a routerLink="/delete-account" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">Delete your account and data</a>,
+          which lists exactly what is erased, what is retained and for how long.
+        </p>
+        <p class="mt-3 text-slate-600">
+          Where an organization licenses {{ brand }} for its employees, that organization decides what gets
+          recorded in its workspace; how it uses those records internally is governed by its service
+          agreement with us and by its own policies.
         </p>
       </section>
 
@@ -259,6 +300,7 @@
         </p>
         <ul class="mt-4 list-disc space-y-2 pl-6 marker:text-slate-400">
           <li><span class="font-medium text-slate-900">Hosting and infrastructure providers</span>, which run the site and its logs.</li>
+          <li><span class="font-medium text-slate-900">Supabase</span>, which hosts the mobile application's database, user authentication and file storage.</li>
           <li><span class="font-medium text-slate-900">Email providers</span>, so we can receive and answer your messages.</li>
           <li><span class="font-medium text-slate-900">Web analytics tools</span>, to measure site usage.</li>
           <li><span class="font-medium text-slate-900">CRM and sales tools</span>, to follow up on your request.</li>
@@ -317,6 +359,13 @@
               <tr>
                 <td class="py-3 pr-4 align-top">Aggregated analytics data</td>
                 <td class="py-3 align-top text-slate-600">Up to 26 months</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 align-top">Account and data inside the mobile application</td>
+                <td class="py-3 align-top text-slate-600">
+                  Until you delete the account &mdash; see
+                  <a routerLink="/delete-account" class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">Delete your account and data</a>
+                </td>
               </tr>
               <tr>
                 <td class="py-3 pr-4 align-top">Records with a legal or accounting obligation</td>

@@ -1,0 +1,247 @@
+<!--
+  Account & Data Deletion — M.I.A Tracker
+  URL required by Google Play (Data safety) and App Store 5.1.1(v).
+  Accent: emerald + lime, same as the navbar, footer and /privacidad.
+  The pt-16 on <article> clears the fixed header (h-16).
+-->
+
+<article class="bg-white text-slate-700 pt-16">
+
+  <!-- ============ Header ============ -->
+  <header class="bg-emerald-900">
+    <div class="mx-auto max-w-4xl px-6 py-16 sm:py-20">
+      <a routerLink="/"
+         class="inline-flex items-center gap-2 text-sm font-medium text-lime-300 hover:text-lime-200">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to home
+      </a>
+
+      <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+        Delete your account and data
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg leading-relaxed text-emerald-100">
+        How to permanently delete your <span class="text-white">{{ brand }}</span> account and everything
+        associated with it, what gets erased, and what we are required to keep.
+      </p>
+
+      <dl class="mt-8 flex flex-wrap gap-x-12 gap-y-4 border-t border-lime-400/30 pt-6 text-sm">
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-wider text-lime-300">Application</dt>
+          <dd class="mt-1 font-medium text-white">{{ brand }}</dd>
+        </div>
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-wider text-lime-300">Developer</dt>
+          <dd class="mt-1 font-medium text-white">{{ developer }}</dd>
+        </div>
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-wider text-lime-300">Last updated</dt>
+          <dd class="mt-1 font-medium text-white">{{ lastUpdated }}</dd>
+        </div>
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-wider text-lime-300">Contact</dt>
+          <dd class="mt-1 font-medium text-white break-words">
+            <a [href]="'mailto:' + contactEmail" class="hover:text-lime-200">{{ contactEmail }}</a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+
+  <!-- ============ Body ============ -->
+  <div class="mx-auto max-w-4xl space-y-6 px-6 py-12 text-base leading-7 lg:py-16">
+
+    <!-- 1 -->
+    <section id="in-app" class="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-6 sm:p-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900">
+        <span class="mr-3 inline-flex h-7 w-7 items-center justify-center rounded-md bg-emerald-900 align-middle text-sm font-bold text-lime-300">1</span>
+        Delete your account from the app
+      </h2>
+      <p class="mt-2 text-slate-600">
+        This is the fastest route: deletion happens immediately, with no involvement from our team.
+      </p>
+
+      <ol class="mt-6 space-y-5">
+        <li class="relative pl-11">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-semibold text-white">1</span>
+          Open <span class="font-medium text-slate-900">{{ brand }}</span> on your device and sign in with
+          the account you want to delete.
+        </li>
+        <li class="relative pl-11">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-semibold text-white">2</span>
+          Tap the menu icon <span class="font-medium text-slate-900">(&#9776;)</span> in the top-left corner
+          to open the side panel.
+        </li>
+        <li class="relative pl-11">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-semibold text-white">3</span>
+          Scroll to the bottom of the panel. Below <em>Sign out</em> you will find the red
+          <span class="font-medium text-slate-900">Delete account</span> button.
+        </li>
+        <li class="relative pl-11">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-semibold text-white">4</span>
+          Read the confirmation notice and tap
+          <span class="font-medium text-slate-900">Delete my account</span>.
+        </li>
+        <li class="relative pl-11">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-semibold text-white">5</span>
+          Your account and its data are erased at that moment and you are signed out automatically.
+        </li>
+      </ol>
+
+      <div class="mt-6 rounded-lg border border-red-200 bg-red-50 p-5">
+        <p class="text-sm leading-6 text-slate-700">
+          <span class="font-semibold text-red-700">This action is permanent and cannot be undone.</span>
+          There is no grace period and no way to recover the information once deletion is confirmed. If you
+          need to keep your inventory, export it first from the Reports section.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section id="by-email" class="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-6 sm:p-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900">
+        <span class="mr-3 inline-flex h-7 w-7 items-center justify-center rounded-md bg-emerald-900 align-middle text-sm font-bold text-lime-300">2</span>
+        If you cannot access the app
+      </h2>
+      <p class="mt-2 text-slate-600">
+        For example, if you lost access to your email, uninstalled the app, or cannot sign in.
+      </p>
+
+      <ol class="mt-6 space-y-5">
+        <li class="relative pl-11">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-semibold text-white">1</span>
+          Write to
+          <a [href]="requestMailto"
+             class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ contactEmail }}</a>
+          from the email address you registered with.
+        </li>
+        <li class="relative pl-11">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-semibold text-white">2</span>
+          Use <span class="font-medium text-slate-900">&ldquo;Account deletion request&rdquo;</span> as the
+          subject and include the email address of the account you want deleted.
+        </li>
+        <li class="relative pl-11">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-semibold text-white">3</span>
+          We verify your identity to make sure the request comes from the account holder.
+        </li>
+        <li class="relative pl-11">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 text-xs font-semibold text-white">4</span>
+          We process the deletion within <span class="font-medium text-slate-900">{{ emailSlaDays }} days</span>
+          at the latest and email you a confirmation when it is complete.
+        </li>
+      </ol>
+    </section>
+
+    <!-- 3 -->
+    <section id="deleted" class="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-6 sm:p-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900">
+        <span class="mr-3 inline-flex h-7 w-7 items-center justify-center rounded-md bg-emerald-900 align-middle text-sm font-bold text-lime-300">3</span>
+        What data is deleted
+      </h2>
+      <p class="mt-2 text-slate-600">
+        All of the following is permanently erased from our active systems.
+      </p>
+
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full min-w-[34rem] border-collapse text-left text-sm">
+          <thead>
+            <tr class="border-b border-slate-300">
+              <th class="py-3 pr-4 font-semibold text-slate-900">Type of data</th>
+              <th class="py-3 font-semibold text-slate-900">What it includes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr *ngFor="let row of deletedData">
+              <td class="py-3 pr-4 align-top font-medium text-slate-900">{{ row.type }}</td>
+              <td class="py-3 align-top text-slate-600">{{ row.detail }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section id="retained" class="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-6 sm:p-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900">
+        <span class="mr-3 inline-flex h-7 w-7 items-center justify-center rounded-md bg-emerald-900 align-middle text-sm font-bold text-lime-300">4</span>
+        What is retained, and for how long
+      </h2>
+      <p class="mt-2 text-slate-600">
+        Only what is strictly necessary for technical, security or legal reasons.
+      </p>
+
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full min-w-[38rem] border-collapse text-left text-sm">
+          <thead>
+            <tr class="border-b border-slate-300">
+              <th class="py-3 pr-4 font-semibold text-slate-900">What</th>
+              <th class="py-3 pr-4 font-semibold text-slate-900">Why</th>
+              <th class="py-3 font-semibold text-slate-900">Retention period</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr *ngFor="let row of retainedData">
+              <td class="py-3 pr-4 align-top font-medium text-slate-900">{{ row.what }}</td>
+              <td class="py-3 pr-4 align-top text-slate-600">{{ row.why }}</td>
+              <td class="py-3 align-top whitespace-nowrap text-slate-600">{{ row.period }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-6 rounded-lg border border-emerald-200 bg-emerald-50 p-5">
+        <p class="font-semibold text-slate-900">Shared company accounts</p>
+        <p class="mt-2 text-sm leading-6 text-slate-700">
+          If your account belongs to an organization with other users, records documenting operations
+          carried out jointly may be retained under that organization's account, stripped of the data that
+          identifies you personally. Your profile, your credentials and your personal data are deleted all
+          the same.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section id="partial" class="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-6 sm:p-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900">
+        <span class="mr-3 inline-flex h-7 w-7 items-center justify-center rounded-md bg-emerald-900 align-middle text-sm font-bold text-lime-300">5</span>
+        Deleting part of your data without deleting your account
+      </h2>
+      <p class="mt-4">
+        You do not have to delete your account to remove information from it. While signed in you can delete
+        individual inventory items, assets, locations, maintenance records and uploaded photos directly from
+        their detail screen; each deletion removes the record and its images from our systems.
+      </p>
+      <p class="mt-4">
+        If you want a broader deletion &mdash; for example, every photo you uploaded, or all records from a
+        given period &mdash; while keeping your account active, email
+        <a [href]="'mailto:' + contactEmail"
+           class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ contactEmail }}</a>
+        describing what you want removed. The same {{ emailSlaDays }}-day window and the same retention
+        periods described above apply.
+      </p>
+    </section>
+
+    <!-- 6 -->
+    <section id="questions" class="scroll-mt-24 rounded-xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900">Questions before you delete?</h2>
+      <p class="mt-4">
+        If you have questions about what happens to your information, write to
+        <a [href]="'mailto:' + contactEmail"
+           class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">{{ contactEmail }}</a>
+        before confirming the deletion. You can also read our
+        <a routerLink="/privacidad"
+           class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">Privacy Policy</a>.
+      </p>
+
+      <div class="mt-6 border-t border-slate-200 pt-6">
+        <p class="text-sm text-slate-500">Last updated: {{ lastUpdated }}.</p>
+        <a routerLink="/"
+           class="mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-emerald-800">
+          Back to home
+        </a>
+      </div>
+    </section>
+
+  </div>
+</article>
