@@ -453,3 +453,18 @@
   background: #e2e8f0;
   border-radius: 3px;
 }
+/* Enlaces dentro de las respuestas del bot (contenido inyectado con [innerHTML]) */
+:host ::ng-deep .message-wrapper.bot .message-bubble .chat-link {
+  color: #047857;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+:host ::ng-deep .message-wrapper.bot .message-bubble .chat-link:hover {
+  color: #065f46;
+}
+
+:host ::ng-deep .message-wrapper.user .message-bubble .chat-link {
+  color: #ecfccb;
+  text-decoration: underline;
+}

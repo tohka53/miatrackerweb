@@ -73,8 +73,8 @@ export class LiveChatComponent implements OnInit, AfterViewChecked {
     {
       keywords: ['platform', 'ios', 'android', 'web', 'mobile', 'app', 'download'],
       keywordsEs: ['plataforma', 'ios', 'android', 'web', 'móvil', 'app', 'descargar'],
-      responseEn: '📱 <strong>Multi-Platform!</strong><br><br>✅ <strong>iOS</strong> - Coming Soon<br>✅ <strong>Android</strong> - Coming Soon<br>✅ <strong>Web</strong> - Any browser<br><br>🔄 <strong>Offline Mode</strong> with auto-sync!',
-      responseEs: '📱 <strong>¡Multiplataforma!</strong><br><br>✅ <strong>iOS</strong> - Próximamente<br>✅ <strong>Android</strong> - Próximamente<br>✅ <strong>Web</strong> - Cualquier navegador<br><br>🔄 <strong>Modo Offline</strong> con sincronización!',
+      responseEn: '📱 <strong>Multi-Platform!</strong><br><br>✅ <strong>iOS</strong> - <a href="https://apps.apple.com/us/app/mia-tracker/id6759971827" target="_blank" rel="noopener noreferrer" class="chat-link"><strong>Download on the App Store</strong></a><br>✅ <strong>Android</strong> - Coming Soon<br>✅ <strong>Web</strong> - Any browser<br><br>🔄 <strong>Offline Mode</strong> with auto-sync!',
+      responseEs: '📱 <strong>¡Multiplataforma!</strong><br><br>✅ <strong>iOS</strong> - <a href="https://apps.apple.com/us/app/mia-tracker/id6759971827" target="_blank" rel="noopener noreferrer" class="chat-link"><strong>Descárgala en el App Store</strong></a><br>✅ <strong>Android</strong> - Próximamente<br>✅ <strong>Web</strong> - Cualquier navegador<br><br>🔄 <strong>Modo Offline</strong> con sincronización!',
       quickReplies: {
         en: [{ text: '📲 See Features', value: 'features' }, { text: '💰 View Pricing', value: 'pricing' }],
         es: [{ text: '📲 Ver Funciones', value: 'features' }, { text: '💰 Ver Precios', value: 'pricing' }]
