@@ -3,9 +3,17 @@
   "rewrites": [
     { "source": "/app", "destination": "/app/index.html" },
     { "source": "/app/:path*", "destination": "/app/index.html" },
-    { "source": "/((?!\\.well-known).*)", "destination": "/index.html" }
+    { "source": "/((?!\\.well-known|mia-tracker\\.apk).*)", "destination": "/index.html" }
   ],
   "headers": [
+    {
+      "source": "/mia-tracker.apk",
+      "headers": [
+        { "key": "Content-Type", "value": "application/vnd.android.package-archive" },
+        { "key": "Content-Disposition", "value": "attachment; filename=\"mia-tracker.apk\"" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
     {
       "source": "/app/(.*)",
       "headers": [
